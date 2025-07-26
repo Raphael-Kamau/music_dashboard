@@ -1,0 +1,111 @@
+/* A global reset to remove default browser padding and margin */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Style the main body of the page */
+body {
+    background-image: url(red_flowers.jpeg);
+    /* A dark background color */
+    color: #fff;
+    /* White text for contrast */
+    display: flex;
+    /* Use flexbox for easy centering */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    min-height: 100vh;
+    /* Make the body at least the height of the viewport */
+    text-align: center;
+    /* Center the text inside the body */
+}
+
+/* Style the main container for the content */
+.container {
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    /* A semi-transparent background for a modern feel */
+    backdrop-filter: blur(10px);
+    /* A cool blur effect */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    /* A subtle shadow */
+}
+
+/* Style the title */
+h1 {
+    margin-bottom: 25px;
+    font-size: 2.5rem;
+}
+
+/* Style the container for the buttons */
+.mood-buttons {
+    border-radius: 8px;
+    background-color: transparent;
+    /* Adds space between the buttons */
+    justify-content: center;
+}
+
+.song-item {
+    display: list-item;
+    border-radius: 8px;
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+}
+
+.song-item:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-bottom: solid 1px #d6c199;
+}
+
+.song-item.active-song {
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: translateY(1px);
+    box-shadow: none;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1);}
+    50% { transform: scale(1.01);}
+    100% { transform: scale(1);}
+}
+
+.song-item.active-song {
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Style for the new playback controls container */
+.playback-controls {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Style the buttons themselves */
+.playback-controls button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    /* Makes the buttons round */
+    cursor: pointer;
+    background: #f5a818;
+    /* A nice blue color */
+    color: #fff;
+    transition: background 0.3s ease;
+    /* Adds a smooth transition for the hover effect */
+}
+
+/* A special style that happens when the mouse hovers over a button */
+button:hover {
+    background: #f54601;
+    /* Darker blue on hover */
+}

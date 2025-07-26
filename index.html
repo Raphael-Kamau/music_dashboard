@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musical Mood Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>What's Your Mood Today?</h1>
+        <div class="mood-buttons" id="song-list">
+            <button title="navigation" class="song-item" data-song-id="1" id="calm-btn">Calm</button> <!--value for attribute title needs to be changed-->
+            <button title="navigation" class="song-item" data-song-id="2" id="energetic-btn">Energetic</button>
+            <button title="navigation" class="song-item" data-song-id="3" id="focus-btn">Focus</button>
+        </div>
+        <div class="playback-controls">
+            <button title="navigation" id="previous-btn"><i class="fa-solid fa-backward-step"></i></button>
+            <button title="navigation" id="play-btn"><i class="fa-solid fa-play"></i></button>
+            <button title="navigation" id="pause-btn"><i class="fa-solid fa-pause"></i></button>
+            <button title="navigation" class="play-next-song" id="next-btn"><i class="fa-solid fa-forward-step"></i></button>
+            <button title="navigation" id="stop-btn"><i class="fa-solid fa-stop"></i></button>            
+            <button title="navigation" id="loop-btn"><i class="fa-solid fa-repeat"></i></button>
+        </div>
+    </div>
+    <div class="audio_files">
+        <audio id="calm-audio" src="relax-calm.mp3"></audio>
+        <audio id="energetic-audio" src="energetic-sports.mp3"></audio>
+        <audio id="focus-audio" src="chill-music.mp3"></audio>
+        <script src="script.js"></script>
+    </div>
+</body>
+
+</html>
